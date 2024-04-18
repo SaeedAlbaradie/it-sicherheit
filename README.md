@@ -1,13 +1,22 @@
+# Aufgabe 1
+openssl version
+OpenSSL 3.2.1 30 Jan 2024 (Library: OpenSSL 3.2.1 30 Jan 2024)
+
 # Aufgabe 2
-Die Datei email.txt wird als Schlüssel genutz für die Folgeaufgaben. Der kryptografische Fingerabdruck mit den MD5 Verfahren kann mit dem folgenden Kommando erzeugt und in die Datei md5_email.txt gespeichert werden:
 
-openssl dgst -md5 email.txt > md5_email.txt
-Der kryptograifsche Fingerabdruck mit den SHA3-256 Verfahren kann mit dem folgenden Kommando erzeugt und in die Datei sha3-256_email.txt gespeichert werden:
+## Eine Datei opensslAufgabe.txt wurde erstellt
+touch opensslAufgabe.txt
+## Dateieingabe
+### touch opensslAufgabe.txt
+Saeed Albaradie
+s_albaradie21@stud.hwr-berlin.de
+## Der kryptografische Fingerabdruck mit den MD5 Verfahren:
+### openssl dgst -md5 opensslAufgabe.txt > opensslAufgabe-md5.txt
+## Der kryptograifsche Fingerabdruck mit den SHA3-256 Verfahren:
+### openssl dgst -sha3-256 opensslAufgabe.txt > opensslAufgabe-sha3-256.txt
 
-openssl dgst -sha3-256 email.txt > sha3-256_email.txt
-Aufgabe 3
-Mit dem folgenden Kommando wird die Datei email.txt mittels des AES-256 Verfahren verschlüsselt. Als Schlüssel wird die email.txt Datei genutzt.
-
+## Aufgabe 3
+Die Datei email.txt mittels des AES-256 Verfahren verschlüsselt
 openssl enc -aes-256-cbc -in email.txt -out aes-256-cbc_email.txt -pass file:email.txt
 Die aes-256-cbs_email.txt Datei kann mithilfe des folgenden Kommandos entschlüsselt werden:
 
