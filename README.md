@@ -1,5 +1,5 @@
 # Aufgabe 1
-openssl version: 
+## openssl version: 
 OpenSSL 3.2.1 30 Jan 2024 (Library: OpenSSL 3.2.1 30 Jan 2024)
 
 # Aufgabe 2
