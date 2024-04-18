@@ -51,12 +51,12 @@ openssl pkeyutl -encrypt -inkey public_key.pem -pubin -in opensslAufgabe.txt -ou
 ## Die opensslAufgabe-rsa.enc Datei Entschlüsselung:
 openssl pkeyutl -decrypt -inkey private_key.pem -in opensslAufgabe-rsa.enc -out opensslAufgabe-decrypted-rsa.txt
 
-Aufgabe 6
-DigiCert, Inc.
-Google Trust Service LLC
-Microsoft Corporation
-D-Trust GmbH
-Amazon
-Apple Inc.
-Sectigo Limited
-Let's Encrypt
+# Aufgabe 6
+| Unternehmen             | Domain               |
+|-------------------------|----------------------|
+| Let’s Encrypt           | www.lencr.org        |
+| Oracle                  | www-cs-02.oracle.com |
+| Amazon                  | www.amazon.com       |
+| Google                  | *.google.com         |
+| Microsoft               | www.microsoft.com    |
+|-------------------------|----------------------|
