@@ -30,30 +30,27 @@ openssl enc -aes-256-cbc -d -in opensslAufgabe-aes256.enc -out opensslAufgabe-ae
 | Linux, MacOS, Win      | GnuPG                 | SHA AES RSA TLS     |
 | Linux, MacOS, Win      | LibreSSL              | SHA AES RSA TLS     |
 | Linux, MacOS, Win      | Botan                 | SHA AES RSA TLS     |
-| Win                    | Aborange Crypter      | AES                 |
-| Win                    | AxCrypt               | AES                 |
 | Win                    | BitLocker             | AES                 |
 | Win, MacOS, Linux      | Bouncy Castle         | SHA AES RSA TLS     |
 | Win, MacOS, Linux      | Cryptography (Python) | SHA AES RSA         |
-| MacOS                  | FileVault 2           | AES                 |
 | Win, MacOS, Linux      | GnuTLS                | SHA AES RSA TLS     |
-| Win, MacOS, Linux      | NaCl                  | AES RSA             |
 | Win, MacOS, Linux      | NSS                   | SHA AES RSA TLS     |
-| Win, MacOS, Linux      | PGP / GPG             | RSA AES             |
-| Win, MacOS, Linux      | TrueCrypt             | AES                 |
-| Win, MacOS, Linux      | VeraCrypt             | AES                 |
+| Win, MacOS, Linux      | PGP                   | RSA AES             |
+|------------------------|-----------------------|---------------------|
 
-Aufgabe 5
-Der folgende Kommando generiert einen Private Key, welche den Public Key ebenfalls beinhaltet.
+# Aufgabe 5
+## Private Key Generierung:
+openssl genpkey -algorithm rsa -out private_key.pem -pkeyopt rsa_keygen_bits:1024
 
-openssl genrsa -out keypair.pem 1024
-Der Public Key muss vom Private Key extrahiert werden:
+## Public Key Extrahierung:
+openssl rsa -pubout -in private_key.pem -out public_key.pem
 
-openssl rsa -in private_key.pem -pubout -out public_key.pem
-Das gerade erstellte Schlüssel Paar kann mit den folgenden zwei Kommandos genutzt werden um die email.txt Datei zu verschlüsseln in die Datei public_key_enc_email.txt und zu entschlüsseln in die Datei dec_email.txt
+## Die opensslAufgabe.txt Datei Verschlüsselung:
+openssl pkeyutl -encrypt -inkey public_key.pem -pubin -in opensslAufgabe.txt -out opensslAufgabe-rsa.enc
 
-openssl pkeyutl -encrypt -pubin -inkey  keys/public_key.pem -in email.txt -out public_key_enc_email.txt
-openssl pkeyutl -decrypt -inkey keys/private_key.pem -in public_key_enc_email.txt -out dec_email.txt
+## Die opensslAufgabe-rsa.enc Datei Entschlüsselung:
+openssl pkeyutl -decrypt -inkey private_key.pem -in opensslAufgabe-rsa.enc -out opensslAufgabe-decrypted-rsa.txt
+
 Aufgabe 6
 DigiCert, Inc.
 Google Trust Service LLC
