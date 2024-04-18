@@ -1,6 +1,0 @@
-| Software               |       OS         |           Algorithms      |
-|------------------------|------------------|---------------------------
-| OpenSSL                |    W, MacOS, L   |    SHA, AES, RSA, TLS     |
-| BitLocker              |    W             |    AES                    |
-| LibreSSL               |    W, MacOS,     |    SHA, AES, RSA, TLS     |
-| PGP                    |    W, MacOS, L   |    RSA, AES               |
