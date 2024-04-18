@@ -7,20 +7,21 @@ OpenSSL 3.2.1 30 Jan 2024 (Library: OpenSSL 3.2.1 30 Jan 2024)
 ## Eine Datei opensslAufgabe.txt wurde erstellt
 touch opensslAufgabe.txt
 ## Dateieingabe
-### touch opensslAufgabe.txt
+touch opensslAufgabe.txt
 Saeed Albaradie
 s_albaradie21@stud.hwr-berlin.de
 ## Der kryptografische Fingerabdruck mit den MD5 Verfahren:
-### openssl dgst -md5 opensslAufgabe.txt > opensslAufgabe-md5.txt
+openssl dgst -md5 opensslAufgabe.txt > opensslAufgabe-md5.txt
 ## Der kryptograifsche Fingerabdruck mit den SHA3-256 Verfahren:
-### openssl dgst -sha3-256 opensslAufgabe.txt > opensslAufgabe-sha3-256.txt
+openssl dgst -sha3-256 opensslAufgabe.txt > opensslAufgabe-sha3-256.txt
 
 ## Aufgabe 3
-Die Datei email.txt mittels des AES-256 Verfahren verschlüsselt
-openssl enc -aes-256-cbc -in email.txt -out aes-256-cbc_email.txt -pass file:email.txt
-Die aes-256-cbs_email.txt Datei kann mithilfe des folgenden Kommandos entschlüsselt werden:
+### Die Datei email.txt mittels des AES-256 Verfahren verschlüsselt
+openssl enc -aes-256-cbc -salt -in opensslAufgabe.txt -out opensslAufgabe-aes256.enc -pass pass:s_albaradie21@stud.hwr-berlin.de -pbkdf2 -iter 10000
+### opensslAufgabe-aes256.enc entschlüsselung:
+openssl enc -aes-256-cbc -d -in opensslAufgabe-aes256.enc -out opensslAufgabe-aes-decoded.txt -pass pass:s_albaradie21@stud.hwr-berlin.de -pbkdf2 -iter 10000
 
-openssl enc -d -aes-256-cbc -in aes-256-cbc_email.txt -out decr.txt -pass file:email.txt 
+
 Aufagbe 4
 OS	Software (Library)	Algorithms
 Win, Linux, MacOS	OpenSSL	SHA AES RSA TLS
