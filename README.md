@@ -15,20 +15,34 @@ openssl dgst -md5 opensslAufgabe.txt > opensslAufgabe-md5.txt
 ## Der kryptograifsche Fingerabdruck mit den SHA3-256 Verfahren:
 openssl dgst -sha3-256 opensslAufgabe.txt > opensslAufgabe-sha3-256.txt
 
-## Aufgabe 3
-### Die Datei email.txt mittels des AES-256 Verfahren verschlüsselt
+# Aufgabe 3
+## Die Datei email.txt mittels des AES-256 Verfahren verschlüsselt
 openssl enc -aes-256-cbc -salt -in opensslAufgabe.txt -out opensslAufgabe-aes256.enc -pass pass:s_albaradie21@stud.hwr-berlin.de -pbkdf2 -iter 10000
-### opensslAufgabe-aes256.enc entschlüsselung:
+## opensslAufgabe-aes256.enc entschlüsselung:
 openssl enc -aes-256-cbc -d -in opensslAufgabe-aes256.enc -out opensslAufgabe-aes-decoded.txt -pass pass:s_albaradie21@stud.hwr-berlin.de -pbkdf2 -iter 10000
 
 
-Aufagbe 4
-OS	Software (Library)	Algorithms
-Win, Linux, MacOS	OpenSSL	SHA AES RSA TLS
-Win	Microsoft CryptoAPI	SHA AES RSA TLS
-Linux, MacOS, Win	GnuPG	SHA AES RSA TLS
-Linux, MacOS, Win	LibreSSL	SHA AES RSA TLS
-Linux, MacOS, Win	Botan	SHA AES RSA TLS
+# Aufagbe 4
+| OS                     | Software (Library)    | Algorithms          |
+|------------------------|-----------------------|---------------------|
+| Win, Linux, MacOS      | OpenSSL               | SHA AES RSA TLS     |
+| Win                    | Microsoft CryptoAPI   | SHA AES RSA TLS     |
+| Linux, MacOS, Win      | GnuPG                 | SHA AES RSA TLS     |
+| Linux, MacOS, Win      | LibreSSL              | SHA AES RSA TLS     |
+| Linux, MacOS, Win      | Botan                 | SHA AES RSA TLS     |
+| Win                    | Aborange Crypter      | AES                 |
+| Win                    | AxCrypt               | AES                 |
+| Win                    | BitLocker             | AES                 |
+| Win, MacOS, Linux      | Bouncy Castle         | SHA AES RSA TLS     |
+| Win, MacOS, Linux      | Cryptography (Python) | SHA AES RSA         |
+| MacOS                  | FileVault 2           | AES                 |
+| Win, MacOS, Linux      | GnuTLS                | SHA AES RSA TLS     |
+| Win, MacOS, Linux      | NaCl                  | AES RSA             |
+| Win, MacOS, Linux      | NSS                   | SHA AES RSA TLS     |
+| Win, MacOS, Linux      | PGP / GPG             | RSA AES             |
+| Win, MacOS, Linux      | TrueCrypt             | AES                 |
+| Win, MacOS, Linux      | VeraCrypt             | AES                 |
+
 Aufgabe 5
 Der folgende Kommando generiert einen Private Key, welche den Public Key ebenfalls beinhaltet.
 
