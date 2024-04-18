@@ -1,0 +1,1 @@
+1. openssl enc -aes-256-cbc -salt -in opensslAufgabe.txt -out opensslAufgabe-aes256.enc -pass pass:s_albaradie21@stud.hwr-berlin.de -pbkdf2 -iter 10000

@@ -1,0 +1,21 @@
+    Let’s Encrypt:
+        Domain: www.lencr.org
+        Zertifikatsname: R3
+
+    Oracle:
+        Domain: www-cs-02.oracle.com
+        Zertifikatsname: DigiCert TLS RSA
+  
+    Amazon:
+        Domain: www.amazon.com
+        Zertifikatsname: DigiCert Global CA
+
+    Google:
+        Domain: *.google.com
+        Zertifikatsname: GTS CA
+
+    Microsoft:
+        Domain: www.microsoft.com
+        Zertifikatsname: Microsoft Azure RSA
+
+

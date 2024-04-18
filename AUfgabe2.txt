@@ -1,0 +1,9 @@
+1. Saeed Albaradie
+   s_albaradie21@stud.hwr-berlin.de
+
+2. openssl dgst -md5 opensslAufgabe.txt > opensslAufgabe-md5.txt 
+   MD5(opensslAufgabe.txt)= b2b00359ec5db6a12b3533ee721c5f19
+
+3. openssl dgst -sha3-256 opensslAufgabe.txt > opensslAufgabe-sha3-256.txt
+   SHA3-256(opensslAufgabe.txt)= 7e64c964bd3bd30d4f22f5f944f33368aaa06d14dad778553809105d37f164b5
+

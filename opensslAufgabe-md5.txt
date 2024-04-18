@@ -1,0 +1,1 @@
+MD5(opensslAufgabe.txt)= b2b00359ec5db6a12b3533ee721c5f19
